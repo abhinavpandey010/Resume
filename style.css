@@ -79,3 +79,33 @@ a:hover{
     margin-left: 130px;
     
 }
+.skill-container{
+    width: 90%;
+    background-color: gray;
+}
+.html{
+    width: 80%;
+    background-color: #468585;
+    text-align: right;
+}
+.css{
+    width: 70%;
+    background-color: #50B498;
+    text-align: right;
+}
+.js{
+    width: 60%;
+    background-color: #9CDBA6;
+    text-align: right;
+}
+.react{
+    width: 60%;
+    background-color: #DEF9C4;
+    text-align: right;
+}
+.git{
+    width: 70%;
+    background-color: #F7E7DC;
+
+    text-align: right;
+}
