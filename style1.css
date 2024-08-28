@@ -21,11 +21,19 @@
   background-color: rgb(40, 40, 40);
 }
 img {
-  width: 100px;
-  height: 95px;
-  border-radius: 50px;
   image-orientation: flip;
   image-resolution: 100%;
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  border-radius: 50%; /* Make the image circular */
+  border: 2px solid #ffbb55; /* Add a border with a custom color */
+  box-shadow: 0 4px 8px rgb(249, 141, 0); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  object-fit: cover; 
+}
+img:hover{
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+  box-shadow: 0 8px 16px rgb(249, 141, 0);
 }
 .name {
   color: white;
@@ -53,7 +61,7 @@ img {
 .contact-heading,
 .skill-heading,
 .edu-heading,
-.project-heading {
+.project-heading,h2 {
   font-weight: 400;
   font-size: large;
   font-size: x-large;
@@ -78,6 +86,53 @@ a:hover {
   /* text-align: center;  */
   margin-left: 130px;
 }
+.qualification-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.qualification-timeline::before {
+  content: '';
+  position: absolute;  
+  width: 100%;
+  height: 10px;
+  background-color: #FF9F55;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  border-radius: 25px;
+}
+.timeline-item {
+  position: relative;
+  width: 300px;
+  margin: 0 10px;
+  text-align: center;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+.timeline-content {
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  z-index: 3;
+} 
 .skill-container {
   width: 90%;
   background-color: gray;
@@ -99,12 +154,16 @@ a:hover {
 }
 .react {
   width: 60%;
-  background-color: #def9c4;
+  background-color: #50b498;
   text-align: right;
 }
 .git {
   width: 70%;
-  background-color: #f7e7dc;
-
+  background-color: #9cdba6;
+  text-align: right;
+}
+.python{
+  width: 75%;
+  background-color: #468585;
   text-align: right;
 }
